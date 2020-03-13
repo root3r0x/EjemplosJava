@@ -1,4 +1,8 @@
 import java.util.*;
+/**
+ * this is a java project from a book Metodología de la programación orientaba a
+ * objetos by 
+ */
 public class Ejercicio7 {
     public static void main(String[] args)  {
         System.out.println("Ejercicio número 7: ");
