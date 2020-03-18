@@ -19,11 +19,9 @@ public class Ejercicio9 {
         double yardas   = 0.0;
         
         double cMtro = 1.0;
-        final double metro = 100;
+        double metro = 100;
         double pulgada = 2.54;
 
-        // Conversiones ya realizadas.
-        double pie = 12 * pulgada;
         Scanner input = new Scanner(System.in);// Entrada de datos.
         // #endregion
 
@@ -36,15 +34,15 @@ public class Ejercicio9 {
                 //Conversiones apartir de datos proporsionados por el usuario
                 yardas  = 3 / inPie; //Yardas
                 pulgada = inPie   * 12; // Pulgadas
-                cMtro   = pulgada * 2.54;
+                cMtro   = pulgada * 2.54;//centimetros
+                metro   = cMtro / 100;//Metros
 
                 System.out.println("\n El valor introducido es: " + inPie + " pies \n");
                 System.out.println("  *** Conversiones ******** \n" +
-                "     Yardas: " + yardas    + " \n " +
+                "      Yardas: " + yardas    + " \n " +
                 "   Pulgadas: " + pulgada   + " \n " +
                 "Centimetros: " + cMtro     + " \n " +
-                "     Metros: " + metro     + " \n " +
-                "Pulgadas: "    + pulgada   + " \n ");
+                "     Metros: " + metro     + " \n ");
                 break;
             } 
             catch (InputMismatchException ex1)    {
@@ -57,6 +55,6 @@ public class Ejercicio9 {
             }
             input.next();
         }   while(true);
-        
+        input.close();
     }
 }
