@@ -28,7 +28,7 @@ public class Ejercicio9 {
         System.out.println("\n You can't reboot the program without calculating the neural ADP firewall!\n");
         do  {
             
-            System.out.print("<|°_°|>  .. Introduzca la cantidad de pies que necesota convertir#-->:");
+            System.out.print("<|°_°|>  .. Introduzca la cantidad de pies que necesita convertir#-->:");
             try {
                 inPie = input.nextDouble();
                 //Conversiones apartir de datos proporsionados por el usuario
