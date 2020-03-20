@@ -6,7 +6,6 @@ import java.util.*;
 public class Ejercicio11	{
 	public static void main(String[] args){
 		///#region Variables | Constantes.
-		final double PI = 3.141592654;
 		double area = 0;
 		double radio = 0;
 		int resp;
@@ -16,7 +15,7 @@ public class Ejercicio11	{
 		do	{
 			try {
 				radio = input.nextDouble(); //Entrada de datos.
-				area = PI * Math.pow(radio, 2); // PI * r (2). 
+				area = Math.PI * Math.pow(radio, 2); // PI * r (2). 
 				resp = (int)area; //Parse a entero.
 				System.out.println("El área del círculo es:" + resp + "\n");
 				break;
