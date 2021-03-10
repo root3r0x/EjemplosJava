@@ -21,7 +21,7 @@ public class Ejercicio12 {
     * @param cantDollares Cantidad de dolares que se desean adquirir.
     * 
     */
-   public static void CalculaDolares(Scanner inp, double cantDollares, double cambio) throws Exception {
+   public static void CalculaDolares( double cantDollares, double cambio) throws Exception {
       tipoCambio = cambio; // set tipo de cambio ingresado.
       pesos = tipoCambio * cantDollares;
    }
@@ -30,6 +30,11 @@ public class Ejercicio12 {
          System.out.printf("");
          break;
       } while (true); **/
-      System.out.printf("\n Hola mundo desde Java esto es una prueba \n");
+      System.out.printf("\n _-***** Conversion de dolares a pesos *****-_ \n");
+      System.out.print("\n .-# Ingrese el tipo de cambio del día: ");
+      tipoCambio = input.nextDouble();
+      System.out.println("\n --- Tipo de cambio: $" + tipoCambio +" ---");
+      System.out.println("\nIngrese la cantidad de dolares a adquirir: ");
+      input.close();
    }
 }
