@@ -12,6 +12,7 @@ public class Ejercicio12 {
    public static double dollar;
    public static double pesos;
    public static double cDolares;
+   public static Boolean bandera;
 
    public static Scanner input = new Scanner(System.in);
    // #endregion
@@ -26,7 +27,6 @@ public class Ejercicio12 {
       pesos = tipoCambio * cantDollares;
       return pesos;
    }
-
 
    public  static void SolveProblem(){
       try{
@@ -45,23 +45,25 @@ public class Ejercicio12 {
    }
 
    public  static void Menu(){
-      Boolean bandera = false; // para salir
-      String sBandera ="";//Esta variable se usa para la entrada de texto. 
+    
+      String sBandera="";//Esta variable se usa para la entrada de texto. 
+      Scanner resp = new Scanner(System.in);
       do {
          //metodo principal
          SolveProblem();
          System.out.printf("\n.-Calculo terminado:|<<¿Desea salir? (Si/No)>>:");
-         sBandera = input.nextLine();
+         sBandera = resp.nextLine();
          if(sBandera.equals("SI") || sBandera.equals("si") || sBandera.equals("Si") || sBandera.equals("sI") || sBandera.equals("s") || sBandera.equals("S")){
            bandera=true;
-           break;
+           System.out.println("Vuelva pronto");
          }
          if(sBandera.equals("NO") || sBandera.equals("no") || sBandera.equals("No") || sBandera.equals("nO") || sBandera.equals("n") || sBandera.equals("N")){
+            bandera = false;
             System.out.println(" \n Ingrese nuevamente los valores.");
          }
-         input.next();
       } while (bandera==false);
       input.close();
+      resp.close();
    }
    public static void main(String[] args) {
       Menu();
