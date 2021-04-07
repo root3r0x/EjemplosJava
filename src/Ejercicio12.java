@@ -26,23 +26,9 @@ public class Ejercicio12 {
       pesos = tipoCambio * cantDollares;
       return pesos;
    }
-   public static void main(String[] args) {
-      Boolean bandera = false;
-      String sBandera ="";//Esta variable se usa para la entrada de texto. 
-      do {
-        System.out.printf("\n.-Calculo terminado:|:<<¿Desea salir? (Si/No)>>:");
-         sBandera = input.nextLine();
-         
-         if(sBandera.equals("SI") || sBandera.equals("si") || sBandera.equals("Si") || sBandera.equals("sI") || sBandera.equals("s") || sBandera.equals("S")){
-           bandera=true;
-         }
-         if(sBandera.equals("NO") || sBandera.equals("no") || sBandera.equals("No") || sBandera.equals("nO") || sBandera.equals("n") || sBandera.equals("N")){
-            System.out.println(" \n");
-            System.out.println(":v");
-         }
-      } while (bandera==false);
 
-     /*
+
+   public  static void SolveProblem(){
       try{
             System.out.printf("\n _-***** Conversion de dolares a pesos *****-_ \n");
             System.out.print("\n .-# Ingrese el tipo de cambio del día: ");
@@ -56,7 +42,28 @@ public class Ejercicio12 {
       }catch(Exception ex){
          System.out.println("Error: " +  ex.getMessage());
       } 
+   }
+
+   public  static void Menu(){
+      Boolean bandera = false; // para salir
+      String sBandera ="";//Esta variable se usa para la entrada de texto. 
+      do {
+         //metodo principal
+         SolveProblem();
+         System.out.printf("\n.-Calculo terminado:|<<¿Desea salir? (Si/No)>>:");
+         sBandera = input.nextLine();
+         if(sBandera.equals("SI") || sBandera.equals("si") || sBandera.equals("Si") || sBandera.equals("sI") || sBandera.equals("s") || sBandera.equals("S")){
+           bandera=true;
+           break;
+         }
+         if(sBandera.equals("NO") || sBandera.equals("no") || sBandera.equals("No") || sBandera.equals("nO") || sBandera.equals("n") || sBandera.equals("N")){
+            System.out.println(" \n Ingrese nuevamente los valores.");
+         }
+         input.next();
+      } while (bandera==false);
       input.close();
-      */
+   }
+   public static void main(String[] args) {
+      Menu();
    } 
 }
