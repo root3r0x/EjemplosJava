@@ -27,10 +27,22 @@ public class Ejercicio12 {
       return pesos;
    }
    public static void main(String[] args) {
-     /** do {
-         System.out.printf("");
-         break;
-      } while (true); **/
+      Boolean bandera = false;
+      String sBandera ="";//Esta variable se usa para la entrada de texto. 
+      do {
+        System.out.printf("\n.-Calculo terminado:|:<<¿Desea salir? (Si/No)>>:");
+         sBandera = input.nextLine();
+         
+         if(sBandera.equals("SI") || sBandera.equals("si") || sBandera.equals("Si") || sBandera.equals("sI") || sBandera.equals("s") || sBandera.equals("S")){
+           bandera=true;
+         }
+         if(sBandera.equals("NO") || sBandera.equals("no") || sBandera.equals("No") || sBandera.equals("nO") || sBandera.equals("n") || sBandera.equals("N")){
+            System.out.println(" \n");
+            System.out.println(":v");
+         }
+      } while (bandera==false);
+
+     /*
       try{
             System.out.printf("\n _-***** Conversion de dolares a pesos *****-_ \n");
             System.out.print("\n .-# Ingrese el tipo de cambio del día: ");
@@ -43,7 +55,8 @@ public class Ejercicio12 {
             System.out.println("\n Total a pagar en mxn es de : $" + pesos + " pesos.");
       }catch(Exception ex){
          System.out.println("Error: " +  ex.getMessage());
-      }
+      } 
       input.close();
-   }
+      */
+   } 
 }
