@@ -9,7 +9,7 @@ El objetivo de este repositorio es simple:
 ___
 ### Detalles ###
 - 1 - Son distintos ejercicios que resuelvo en el lenguaje de programación **JAVA** .
-- 2 - Son ejercicos para practicar puedes usar cualquier lenguaje que tengas la intención de aprender/practicar.
+- 2 - Son ejercicios para practicar puedes usar cualquier lenguaje que tengas la intención de aprender/practicar.
 - 3 - Por el momento solo cuento con dos ramas `master` y `dev`, estoy usando la rama `dev`en cuando resuelvo el ejercico la paso a `master`.
  - 4 - Estos los puedes encontrar en el archivo __**Ejercicios_sin_respuesta.odt**__
  
