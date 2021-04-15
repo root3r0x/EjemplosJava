@@ -7,7 +7,6 @@
  *                   ----------
  *                    b^(3/4)
  */
-import java.lang.annotation.Documented;
 import java.util.*;
 
 public class Ejercicio13 {
@@ -28,8 +27,7 @@ public class Ejercicio13 {
     * @return
     * @throws Exception
     */
-   public static double solveProcedure(double x,  double y, double z, double w, double b)
-   throws Exception {
+   public static double solveProcedure(double x,  double y, double z, double w, double b) throws Exception   {
       //variables defined by user
       X = x; Y = y; Z = z; W = w;b = B;
       try {
@@ -70,7 +68,15 @@ public class Ejercicio13 {
          String R = input.next();
          if(R.equals("Y")|| R.equals("y") || R.equals("yes")|| R.equals("YES"))
          {
-            System.out.println("RESPUESTA: " + R);
+            System.out.println("\n.-------------- RESPUESTA: --------------.");
+            try{
+               double Resp = solveProcedure(X, Y, Z, W, B);
+               System.out.print(" -" + Resp);
+            }
+            catch(Exception ex)
+            {
+               System.out.println(ex.getMessage());
+            }
             break;
          }
          else{
