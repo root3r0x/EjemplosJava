@@ -15,7 +15,7 @@ public class Ejercicio13 {
    //#region Variables
    public static double X=0, Y=0, Z=0, W=0; //variables to read.
    public static double B =0, f=0; //variable we wish to calculr
-   Scanner input = new Scanner(System.in);   //variable for data input.
+   public static Scanner input = new Scanner(System.in);   //variable for data input.
    //#endregion
    
    /**
@@ -44,12 +44,43 @@ public class Ejercicio13 {
       //answer
       return f;
    }
-   public static void Menu(){
-
-      System.out.println("\n Hola mundo");
+   public static void MenuInputData(){
+      while(true){
+         System.out.println("\n .-Ingrese el valor de las variables: ");
+         System.out.println("\n..........................................");
+         System.out.print(".    ---> Ingresar X: ");
+         X = input.nextDouble();
+         System.out.print(".    ---> Ingresar Y: ");
+         Y = input.nextDouble();
+         System.out.print(".    ---> Ingresar Z: ");
+         Z = input.nextDouble();
+         System.out.print(".    ---> Ingresar W: ");
+         W = input.nextDouble();
+         System.out.print(".    ---> Ingresar B: ");
+         B = input.nextDouble();
+         System.out.println("..........................................");
+         //Cuadro de muestra.
+         System.out.println(" [- Valor de X: " + X + " - ]");
+         System.out.println(" [- Valor de Y: " + Y + " - ]");
+         System.out.println(" [- Valor de Z: " + Z + " - ]");
+         System.out.println(" [- Valor de W: " + W + " - ]");
+         System.out.println(" [- Valor de B: " + B + " - ]");
+         System.out.println("..........................................");
+         System.out.print("\n #| ¿los valores son correctos?: [Y][N] ? |#R: ");
+         String R = input.next();
+         if(R.equals("Y")|| R.equals("y") || R.equals("yes")|| R.equals("YES"))
+         {
+            System.out.println("RESPUESTA: " + R);
+            break;
+         }
+         else{
+            System.out.println("Ingrese nuevamente los valores.");
+         }
+      }
+      System.out.println("Problema.");
    }
    public static void main(String[] args)
    {
-      Menu();
+      MenuInputData();
    }
 }
