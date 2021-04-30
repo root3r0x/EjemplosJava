@@ -32,8 +32,8 @@ public class Ejercicio13 {
       X = x; Y = y; Z = z; W = w;b = B;
       try {
          //formula
-         f = (4 * Math.pow(X,2) * Math.pow(Y, 2) );
-         f = Math.pow(f, 2);
+         f = (4* Math.pow(X,2) * Math.pow(Y, 2) );
+        // f = Math.pow(f, 2);
          double firtBase = 4* Math.pow(x,1/2);
          double  base = firtBase / Math.pow(b,3/4);
       }  catch (Exception ex) {
@@ -71,7 +71,7 @@ public class Ejercicio13 {
             System.out.println("\n.-------------- RESPUESTA: --------------.");
             try{
                double Resp = solveProcedure(X, Y, Z, W, B);
-               System.out.print(" -" + Resp);
+               System.out.print(" --> # " + Resp);
             }
             catch(Exception ex)
             {
@@ -83,7 +83,7 @@ public class Ejercicio13 {
             System.out.println("Ingrese nuevamente los valores.");
          }
       }
-      System.out.println("Problema.");
+      System.out.println("  <-- Solución.");
    }
    public static void main(String[] args)
    {
